@@ -1,0 +1,114 @@
+#header {
+    width: 38%;
+    border-bottom: solid;
+    /* height: 15vh; */
+}
+
+
+
+#tic-tac-height {
+    height: 450px;
+    width: 40%;
+}
+
+
+.row-height {
+    height: 100%;
+    width: 100%; 
+}
+
+.tic-tac {
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#game-container {
+    display: none;
+}
+
+
+#t3, #m3, #b3 {
+    border-left: solid;
+    border-color: black;
+}
+
+#t1, #t2, #t3 {
+    border-bottom: solid;
+    border-color: black;
+}
+
+#m1, #m2, #m3 {
+    border-bottom: solid;
+    border-color: black;
+}
+
+#t1, #m1, #b1 {
+   border-right: solid;
+   border-color: black; 
+}
+
+
+
+
+/* #modal {
+    border: solid;
+    height: 100%;
+    display: ;
+} */
+
+.image-container {
+    /* border-bottom: solid; */
+}
+
+#image-container {
+    height: 220px;
+}
+
+
+
+#robo-image {
+    height: 200px;
+    display: none;
+}
+
+
+
+#human-image {
+    height: 200px;
+    display: none;
+}
+
+
+#reset-modal {
+    height: 100%;
+    display: ;
+}
+
+#start-button-container {
+    border-bottom: solid;
+}
+
+#ai-button-container {
+    border-left: solid;
+}
+
+
+
+@media (max-width: 760px) {
+    #tic-tac-height {
+        height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    #tic-tac-height {
+        height: 200px;
+    }
+}
+
+
