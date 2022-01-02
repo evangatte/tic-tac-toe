@@ -95,37 +95,50 @@ body {
 
 
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
     #tic-tac-height {
-        height: 350px;
+     height: 350px; 
     }
 
-    #start-game {
-        margin-bottom: 20px;
+    #human-button {
+        padding-left: .5px;
+        padding-right: .5px;
+    }
+
+    .image-container {
+        display: none;
     }
 }
 
-@media (max-width: 555px) {
+@media (max-width: 500px) {
     #tic-tac-height {
         height: 200px;
     }
 
-    #reset-button {
-        font-size: 1vh;
+    #image-container {
+        display: none;
+    }
+
+     #reset-button {
+        padding-right: .5px;
+        padding-left: .5px;
     }
 
      #start-game {
-        font-size: 1vh;
+        padding-left: .5px;
+        padding-right: .5px;
     }
 
     #human-button {
-        font-size: 1vh;
+        padding-left: .5px;
+        padding-right: .5px;
     }
     
     
     #ai-button {
-        font-size: 1vh;
-    } 
+        padding-left: .5px;
+        padding-right: .5px;
+    }  
 
 
 }

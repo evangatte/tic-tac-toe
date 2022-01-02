@@ -32,11 +32,9 @@ ticTac.css('cursor', 'pointer');
 
 
 $('#ai-button').hover(() => {
-    $('#ai-button').addClass('bg-dark')
     $('#robo-image').show();
 }, () => {
     $('#robo-image').hide();
-    $('#ai-button').removeClass('bg-dark')
 })
 
 
