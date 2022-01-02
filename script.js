@@ -65,6 +65,7 @@ $('#ai-button').click(() => {
 
 
 $('#start-game').on('click', () => {
+    ticTac.text('.');
     ticTac.addClass('text-info')
      if (!(($('#ai-button').hasClass('play-ai')) || ($('#human-button').hasClass('play-human')))) {
         alert('Choose Am Oponent!')
@@ -131,7 +132,7 @@ function playComputerGame() {
         $('#game-container').css('display', 'none');    
         $('#reset-modal').slideDown('slow');
          ticTac.css('color', 'white');
-         ticTac.text('&nbsp');
+         //ticTac.text('&nbsp');
          ticTac.removeClass('invalid')
          ticTac.removeClass('playerPoint')
          ticTac.removeClass('compPoint')
@@ -141,7 +142,7 @@ function playComputerGame() {
          $('#ai-button').removeClass('play-ai');
          ticTac.off('click')
          $('#game-container').children().prop('disabled', false);
-
+         $('#winning-screen').html(' ');
          trackPlayersTurn = 1;
          counter = 0;
     })
@@ -226,6 +227,7 @@ function playHumanGame() {
        $('#ai-button').removeClass('btn-primary');
        $('#ai-button').removeClass('play-ai');
        ticTac.removeClass('invalid');
+       $('#winning-screen').html(' ');
        counter = 0;
        trackPlayersTurn = 1;
     })

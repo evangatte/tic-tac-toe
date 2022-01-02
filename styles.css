@@ -53,18 +53,6 @@
 }
 
 
-
-
-/* #modal {
-    border: solid;
-    height: 100%;
-    display: ;
-} */
-
-.image-container {
-    /* border-bottom: solid; */
-}
-
 #image-container {
     height: 220px;
 }
@@ -86,6 +74,7 @@
 
 #reset-modal {
     height: 100%;
+    width: 100%
     display: ;
 }
 
@@ -97,18 +86,45 @@
     border-left: solid;
 }
 
+#start-game {
+    font-size: 3vh;
+}
+
+
 
 
 @media (max-width: 760px) {
     #tic-tac-height {
         height: 350px;
     }
+
+    #start-game {
+        margin-bottom: 20px;
+    }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 555px) {
     #tic-tac-height {
         height: 200px;
     }
+
+    #reset-button {
+        font-size: 1vh;
+    }
+
+    #start-game {
+        font-size: 1vh;
+    }
+
+    #human-button {
+        font-size: 1vh;
+    }
+    
+    #ai-button {
+        font-size: 1vh;
+    }
+
+
 }
 
 
