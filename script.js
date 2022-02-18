@@ -33,14 +33,18 @@ ticTac.css('cursor', 'pointer');
 
 $('#ai-button').hover(() => {
     $('#robo-image').show();
+    $('#ai-button').addClass('bg-danger')
 }, () => {
     $('#robo-image').hide();
+    $('#ai-button').removeClass('bg-danger')
 })
 
 
 $('#human-button').hover(() => {
     $('#human-image').show()
+    $('#human-button').addClass('bg-danger')
 }, () => { $('#human-image').hide()
+    $('#human-button').removeClass('bg-danger')
 })
 
 
@@ -50,14 +54,17 @@ $('#human-button').click(() => {
     $('#ai-button').removeClass('play-ai');
     $('#ai-button').removeClass('btn-primary');
     $('#start-game').prop('disabled', false)
+    $('#human-button').addClass('bg-dark')
+    $('#ai-button').removeClass('bg-dark')
 })
 
 $('#ai-button').click(() => {
-    $('#ai-button').addClass('btn-primary');
+    $('#ai-button').addClass('bg-dark')
     $('#ai-button').addClass('play-ai');
     $('#human-button').removeClass('play-human');
     $('#human-button').removeClass('btn-primary');
     $('#start-game').prop('disabled', false)
+    $('#human-button').removeClass('bg-dark')
 })
 
 
@@ -66,7 +73,7 @@ $('#start-game').on('click', () => {
     ticTac.text('.');
     ticTac.addClass('text-info')
      if (!(($('#ai-button').hasClass('play-ai')) || ($('#human-button').hasClass('play-human')))) {
-        alert('Choose Am Oponent!')
+        alert('Choose An Oponent!')
         return;
     } else {
         $('#start-game').addClass('animated bounce');
@@ -138,6 +145,7 @@ function playComputerGame() {
          $('#human-button').removeClass('play-human')
          $('#ai-button').removeClass('btn-primary');
          $('#ai-button').removeClass('play-ai');
+         $('#ai-button').removeClass('bg-dark');
          ticTac.off('click')
          $('#game-container').children().prop('disabled', false);
          $('#winning-screen').html(' ');
@@ -167,7 +175,7 @@ function playComputerGame() {
 //functions/cb functions to check for winner (computer vs player)
 function checkIfPlayerwins() {
     if(f1.every(playerCallBack) || f2.every(playerCallBack) || f3.every(playerCallBack) || f4.every(playerCallBack) || f5.every(playerCallBack) || f6.every(playerCallBack) || f7.every(playerCallBack) || f8.every(playerCallBack)) {
-        $('#winning-screen').html('<h1>Humans FTW</h1>');
+        $('#winning-screen').html('<h1>You Win!</h1>');
         $('#game-container').children().prop('disabled', true);
         ticTac.addClass('invalid');
         trackPlayersTurn = 1;
@@ -221,9 +229,11 @@ function playHumanGame() {
         ticTac.removeClass('playerOne')
         ticTac.removeClass('playerTwo')
        $('#human-button').removeClass('btn-primary');
+       $('#human-button').removeClass('bg-dark');
        $('#human-button').removeClass('play-human')
        $('#ai-button').removeClass('btn-primary');
        $('#ai-button').removeClass('play-ai');
+       $('#ai-button').removeClass('bg-dark');
        ticTac.removeClass('invalid');
        $('#winning-screen').html(' ');
        counter = 0;
